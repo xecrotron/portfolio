@@ -39,7 +39,7 @@ jobs:
     environment:
       name: github-pages
     steps:
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
+      # - name: Download build artifacts
+      #   uses: actions/download-artifact@v4
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
