@@ -1,36 +1,36 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches: 
-      - "master" 
-      - "feature/*"
+    branches:
+      - master
+      - feature/*
   pull_request:
-    branches: 
-      - "master"
-
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu:latest 
-
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check directory
-        run: pwd
-      - name: Check files
-        run: ls
-      - name: install dependencies
+      - name: Install dependencies
         run: npm ci
-      - name: Run Build
+      - name: Run build
         run: npm run build
-      # - name: Deploy to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: .next
+      - name: Upload build artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .next
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-pages-artifact@v3
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v3
