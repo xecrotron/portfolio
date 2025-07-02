@@ -33,4 +33,7 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v4
       - name: Deploy to GitHub Pages
+        permissions:
+          id-token: write
+          pages: write
         uses: actions/deploy-pages@v3
