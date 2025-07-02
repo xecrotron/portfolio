@@ -23,13 +23,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run build
-        run: npm run build
-      - name: Check directories
-        run: pwd && ls
-      - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           path: .next
+        run: npm run build && ls
+      # - name: Check directories
+      #   run: pwd && ls
+      # - name: Upload build artifacts
 
   deploy:
     runs-on: ubuntu-latest
