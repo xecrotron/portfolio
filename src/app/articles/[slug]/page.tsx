@@ -11,7 +11,7 @@ type Props = {
 
 export async function generateStaticParams() {
   const article = await getArticles();
-  return [...article.map((t) => {return t.slug})];
+  return article.map((t) => {return t.slug});
 }
 
 export default async function ArticlePage({ params }: Props) {
