@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/site/Header";
 import { ArrowLeft } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 type Props = {
   params: { slug: string };
@@ -11,7 +12,7 @@ type Props = {
 
 export async function generateStaticParams() {
   const articles = await getArticles();
-  return (articles.map(t => ({ slug: t.slug })));
+  return (articles.map(t => ({ slug: t.slug})));
 }
 
 export default async function ArticlePage({ params }: Props) {
@@ -54,9 +55,11 @@ export default async function ArticlePage({ params }: Props) {
               data-ai-hint="article hero"
             />
           </div>
-          <div className="prose prose-lg max-w-none text-foreground/90">
-             <p>{article.content}</p>
+          <div className="markdown">
+             {/* <p>{article.content}</p> */}
+            <ReactMarkdown>{article.content}</ReactMarkdown>
           </div>
+          
         </div>
       </main>
     </div>
