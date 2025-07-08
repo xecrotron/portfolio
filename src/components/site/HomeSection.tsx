@@ -9,10 +9,10 @@ export function HomeSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center py-16">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tighter">
-              Hi, I'm ProfolioFlow
+              Hi, I'm Lakshay
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl">
-              A passionate developer creating modern and interactive web applications. This portfolio is a showcase of my journey, skills, and the projects I've brought to life.
+              A passionate developer creating modern and interactive web applicationss — and building resilient infrastructure . This portfolio is a showcase of my journey, skills, and the projects I've brought to life.
             </p>
             <div className="flex gap-4">
                 <Button asChild size="lg">
