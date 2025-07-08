@@ -1,4 +1,4 @@
-import { getArticleBySlug } from "@/lib/articles";
+import { getArticleBySlug, getArticles } from "@/lib/articles";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,6 +8,11 @@ import { ArrowLeft } from "lucide-react";
 type Props = {
   params: { slug: string };
 };
+
+export async function generateStaticParams() {
+  const articles = await getArticles();
+  return (articles.map(t => ({ slug: t.slug })));
+}
 
 export default async function ArticlePage({ params }: Props) {
   const article = await getArticleBySlug(params.slug);
