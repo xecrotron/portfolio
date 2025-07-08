@@ -17,7 +17,6 @@ export async function generateStaticParams() {
 
 export default async function ArticlePage({ params }: Props) {
   const article = await getArticleBySlug(params.slug);
-  console.log("Article:", article);
 
   if (!article) {
     notFound();
