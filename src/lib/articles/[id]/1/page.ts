@@ -1,4 +1,4 @@
-import article1 from "@/public/article1.jpg";
+import article1 from "@/../public/article1.jpg";
 const article = 
 {
     id: "1",
