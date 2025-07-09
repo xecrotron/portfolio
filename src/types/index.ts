@@ -5,4 +5,6 @@ export type Article = {
   content: string;
   imageUrl: string;
   createdAt: string;
+  external: boolean;
+  url?: string;
 };

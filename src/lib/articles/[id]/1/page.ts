@@ -1,10 +1,13 @@
+import article1 from "@/public/article1.jpg";
 const article = 
 {
     id: "1",
-    title: "The Future of Web Development",
-    slug: "the-future-of-web-development",
-    imageUrl: "https://placehold.co/600x400.png",
+    title: "My Own Way of Git Branching",
+    slug: "my-own-way-of-git-branching",
+    imageUrl: article1,
     createdAt: new Date("2023-10-26T10:00:00Z").toISOString(),
+    external: true,
+    url: "https://medium.com/@jacoblogan98/understanding-git-branching-5d01f3dda541",
     content: `
 
 ## The Future of Web Development

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Header } from "@/components/site/Header";
 import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import {redirect} from "next/navigation";
 
 type Props = {
   params: { slug: string };
@@ -17,6 +18,9 @@ export async function generateStaticParams() {
 
 export default async function ArticlePage({ params }: Props) {
   const article = await getArticleBySlug(params.slug);
+  if(article?.external) {
+    redirect(article.url || notFound());
+  }
 
   if (!article) {
     notFound();

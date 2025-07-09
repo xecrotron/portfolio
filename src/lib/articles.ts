@@ -1,5 +1,5 @@
 import type { Article } from "@/types";
-const articleIds = ["1", "2", "3"];
+const articleIds = ["1"];
 
 const allarticles: Promise<Article[]> = Promise.all(
   articleIds.map((id) => import(`./articles/[id]/${id}/page`).then((mod) => mod.default))

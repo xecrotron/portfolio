@@ -2,31 +2,24 @@ import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
-
+import project1 from "@/public/project1.jpg"; 
+import project2 from "@/public/project2.png";
 const projects = [
     {
-        title: "Project Alpha",
-        description: "An innovative platform for project management, designed to streamline workflows and enhance team collaboration. The idea came from seeing inefficiencies in existing tools.",
-        imageUrl: "https://placehold.co/600x400.png",
-        tags: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
-        link: "#",
-        imageHint: "office collaboration"
+        title: "Social Media Application",
+        description: "Developed a social media web application using Spring Boot and Java, enabling account creation via email,post sharing, and interactive features such as reactions and comments.",
+        imageUrl: project1,
+        tags: ["Spring Boot", "Java", "PostgreSQL"],
+        link: "https://github.com/xecrotron/Social-Media-Application",
+        imageHint: "Backend Application"
     },
     {
-        title: "Project Beta",
-        description: "A mobile-first social networking app for hobbyists. I wanted to create a space for people to connect over shared interests without the noise of major platforms.",
-        imageUrl: "https://placehold.co/600x400.png",
-        tags: ["React Native", "Firebase", "GraphQL"],
-        link: "#",
-        imageHint: "mobile app interface"
-    },
-    {
-        title: "Project Gamma",
-        description: "An e-commerce site with a focus on sustainable products. This project was born from a passion for environmentalism and a desire to make eco-friendly shopping easier.",
-        imageUrl: "https://placehold.co/600x400.png",
-        tags: ["Next.js", "Shopify API", "Styled Components"],
-        link: "#",
-        imageHint: "sustainable products"
+        title: "GitDetect",
+        description: "Search and Finds GitHub Users and displays their details, including the bio and Social Media Links.",
+        imageUrl: project2,
+        tags: ["HTML", "CSS", "JS"],
+        link: "https://gitdetect-xecrotron.netlify.app/",
+        imageHint: "Frotnend Application"
     }
 ];
 

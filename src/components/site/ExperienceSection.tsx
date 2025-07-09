@@ -1,29 +1,31 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Briefcase } from "lucide-react";
+import Markdown from "react-markdown";  
 
 const experiences = [
     {
-        role: "Senior Frontend Developer",
-        company: "Tech Solutions Inc.",
-        period: "2020 - Present",
-        description: "Leading the development of innovative user interfaces and enhancing application performance. Collaborating with cross-functional teams to deliver high-quality software solutions."
+        role: "Software Engineer",
+        company: "WebMD",
+        period: "July 2024 - Present",
+        description: `
+-   Maintaining and enhancing WebMDHelios Web Applications, a comprehensive internal platform used for managing many organizational workflows.
+
+-   Collaborating with the DevOps team to manage infrastructure across the Europe vertical, overseeing migrations, and working closely with developers to troubleshoot and resolve application issues.
+`
     },
     {
-        role: "Web Developer",
-        company: "Creative Agency",
-        period: "2018 - 2020",
-        description: "Developed and maintained client websites, focusing on responsive design and user experience. Worked with a variety of technologies to meet diverse project requirements."
-    },
-    {
-        role: "Junior Developer",
-        company: "Startup Hub",
-        period: "2016 - 2018",
-        description: "Gained hands-on experience in a fast-paced environment, contributing to multiple projects and learning from senior developers."
+        role: "Associate Research Intern",
+        company: "Mantra Softech",
+        period: " March 2024 - July 2024",
+        description: `
+-   Developed and maintained client websites, focusing on responsive design and user experience.
+-   Worked with a variety of technologies to meet diverse project requirements.
+`
     }
 ];
 
 const jobInterests = {
-    roles: ["Lead Frontend Developer", "Senior Software Engineer", "UI/UX Engineer"],
+    roles: ["DevOps Engineer", "Software Engineer", "Full Stack Developer"],
     industries: ["SaaS", "FinTech", "E-commerce", "HealthTech"]
 }
 
@@ -51,7 +53,10 @@ export function ExperienceSection() {
                             <h4 className="font-bold text-lg font-headline">{exp.role}</h4>
                             <p className="font-semibold text-primary">{exp.company}</p>
                             <p className="text-sm text-muted-foreground mb-2">{exp.period}</p>
-                            <p className="text-foreground/80">{exp.description}</p>
+                            {/* <p className="text-foreground/80">{exp.description}</p> */}
+                            <p className="markdown text-foreground/80">
+                                <Markdown >{exp.description}</Markdown>
+                            </p>
                         </div>
                     ))}
                 </div>
