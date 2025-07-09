@@ -26,7 +26,7 @@ export function HomeSection() {
             </div>
           </div>
           <div className="flex justify-center md:justify-end">
-            <Image
+            <img
               src={profile}
               alt="Portrait"
               width={500}

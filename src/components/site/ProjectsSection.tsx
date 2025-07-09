@@ -2,10 +2,10 @@ import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
-// import project1 from "@/../public/project1.jpg"; 
-// import project2 from "/../public/project2.png";
-import project2 from "../../../public/project2.png"; 
-import project1 from "../../../public/project1.jpg"; 
+import project1 from "@/../public/project1.jpg"; 
+import project2 from "@/../public/project2.png";
+// import project2 from "../../../public/project2.png"; 
+// import project1 from "../../../public/project1.jpg"; 
 const projects = [
     {
         title: "Social Media Application",
@@ -39,13 +39,12 @@ export function ProjectsSection() {
             {projects.map((project, index) => (
                 <Card key={index} className="overflow-hidden group flex flex-col">
                     <div className="relative aspect-video">
-                         <Image 
-                            src={project.imageUrl} 
+                         <img
+                            src={project.imageUrl}
                             alt={project.title}
-                            fill
-                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                             data-ai-hint={project.imageHint}
-                        />
+                          />
                     </div>
                     <div className="flex flex-col flex-grow">
                       <CardHeader>

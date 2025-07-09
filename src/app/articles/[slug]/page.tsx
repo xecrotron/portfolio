@@ -50,12 +50,10 @@ export default async function ArticlePage({ params }: Props) {
             })}
           </p>
           <div className="aspect-video relative mb-8 rounded-lg overflow-hidden">
-            <Image
+            <img
               src={article.imageUrl}
               alt={article.title}
-              fill
               className="object-cover"
-              priority
               data-ai-hint="article hero"
             />
           </div>
