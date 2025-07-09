@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Header } from "@/components/site/Header";
 import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import {redirect} from "next/navigation";
 
 type Props = {
   params: { slug: string };
@@ -17,6 +18,9 @@ export async function generateStaticParams() {
 
 export default async function ArticlePage({ params }: Props) {
   const article = await getArticleBySlug(params.slug);
+  if(article?.external) {
+    redirect(article.url || notFound());
+  }
 
   if (!article) {
     notFound();
@@ -46,12 +50,10 @@ export default async function ArticlePage({ params }: Props) {
             })}
           </p>
           <div className="aspect-video relative mb-8 rounded-lg overflow-hidden">
-            <Image
-              src={article.imageUrl}
+            <img
+              src={article.imageUrl.src}
               alt={article.title}
-              fill
               className="object-cover"
-              priority
               data-ai-hint="article hero"
             />
           </div>

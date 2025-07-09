@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import profile from "@/public/profile.png";
 
 export function HomeSection() {
   return (
@@ -24,14 +25,13 @@ export function HomeSection() {
             </div>
           </div>
           <div className="flex justify-center md:justify-end">
-            <Image
-              src="https://placehold.co/500x500.png"
+            <img
+              src={profile.src}
               alt="Portrait"
               width={500}
               height={500}
               className="rounded-full object-cover aspect-square shadow-lg"
               data-ai-hint="professional portrait"
-              priority
             />
           </div>
         </div>

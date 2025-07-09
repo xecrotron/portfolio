@@ -22,10 +22,9 @@ export function ArticleCard({ article }: ArticleCardProps) {
       <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
         <CardHeader>
           <div className="aspect-video relative mb-4">
-            <Image
-              src={article.imageUrl}
+            <img
+              src={article.imageUrl.src}
               alt={article.title}
-              fill
               className="object-cover rounded-md"
               data-ai-hint="technology abstract"
             />
