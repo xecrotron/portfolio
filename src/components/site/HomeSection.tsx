@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import profile from "@/../public/profile.png"; // Adjust the path as necessary";
+// import profile from "@/../public/profile.png"; // Adjust the path as necessary";
+import profile from "../../../public/profile.png"; // Adjust the path as necessary
 
 export function HomeSection() {
   return (

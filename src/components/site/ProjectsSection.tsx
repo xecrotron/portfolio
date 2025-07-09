@@ -2,8 +2,10 @@ import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
-import project1 from "@/../public/project1.jpg"; 
-import project2 from "@/../public/project2.png";
+// import project1 from "@/../public/project1.jpg"; 
+// import project2 from "/../public/project2.png";
+import project2 from "../../../public/project2.png"; 
+import project1 from "../../../public/project1.jpg"; 
 const projects = [
     {
         title: "Social Media Application",
