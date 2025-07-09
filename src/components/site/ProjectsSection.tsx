@@ -40,7 +40,7 @@ export function ProjectsSection() {
                 <Card key={index} className="overflow-hidden group flex flex-col">
                     <div className="relative aspect-video">
                          <img
-                            src={project.imageUrl}
+                            src={project.imageUrl.src}
                             alt={project.title}
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                             data-ai-hint={project.imageHint}

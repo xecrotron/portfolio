@@ -23,7 +23,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
         <CardHeader>
           <div className="aspect-video relative mb-4">
             <img
-              src={article.imageUrl}
+              src={article.imageUrl.src}
               alt={article.title}
               className="object-cover rounded-md"
               data-ai-hint="technology abstract"

@@ -27,13 +27,12 @@ export function HomeSection() {
           </div>
           <div className="flex justify-center md:justify-end">
             <img
-              src={profile}
+              src={profile.src}
               alt="Portrait"
               width={500}
               height={500}
               className="rounded-full object-cover aspect-square shadow-lg"
               data-ai-hint="professional portrait"
-              priority
             />
           </div>
         </div>
