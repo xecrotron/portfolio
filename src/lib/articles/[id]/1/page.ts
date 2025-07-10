@@ -7,7 +7,7 @@ const article =
     imageUrl: article1,
     createdAt: new Date("2023-10-26T10:00:00Z").toISOString(),
     external: true,
-    url: "https://medium.com/@jacoblogan98/understanding-git-branching-5d01f3dda541",
+    url: "https://medium.com/p/e41384711cb5",
     content: `
 
 ## The Future of Web Development
