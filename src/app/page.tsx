@@ -18,7 +18,7 @@ export default async function Home() {
         <ArticlesSection articles={articles} />
       </main>
       <footer className="py-6 text-center text-muted-foreground text-sm bg-muted/50">
-        <p>&copy; {new Date().getFullYear()} ProfolioFlow. All rights reserved.</p>
+        {/* <p>&copy; {new Date().getFullYear()} ProfolioFlow. All rights reserved.</p> */}
       </footer>
     </div>
   );
